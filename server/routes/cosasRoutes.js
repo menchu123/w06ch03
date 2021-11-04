@@ -4,6 +4,8 @@ const Cosa = require("../../database/models/cosa");
 
 const router = express.Router();
 
+const permits = require("../../index");
+
 router.get("/", async (req, res) => {
   debug("Loading cosas");
   const cosas = await Cosa.find();

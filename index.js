@@ -1,8 +1,11 @@
 require("dotenv").config();
 require("./database/index");
 const inquirer = require("inquirer");
+const { model } = require("mongoose");
 const initializeServer = require("./server/index");
 const dataBase = require("./database/index");
+
+let permits;
 
 (async () => {
   const answers = await inquirer.prompt([
@@ -38,4 +41,7 @@ const dataBase = require("./database/index");
   ]);
   initializeServer(answers.port || process.env.SERVER_PORT || 5000);
   dataBase(answers.database);
+  permits = answers.permits;
 })();
+
+module.exports = permits;
