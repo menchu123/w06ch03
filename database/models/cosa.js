@@ -7,6 +7,6 @@ const cosaSchema = new Schema({
   },
 });
 
-const Cosa = model("Cosa", cosaSchema);
+const Cosa = model("Cosa", cosaSchema, "cosas-que-se");
 
 module.exports = Cosa;
