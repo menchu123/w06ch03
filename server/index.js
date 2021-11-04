@@ -18,4 +18,4 @@ const initializeServer = (port) => {
   });
 };
 
-module.exports(initializeServer);
+module.exports = initializeServer;
