@@ -1,7 +1,6 @@
 require("dotenv").config();
 require("./database/index");
 const inquirer = require("inquirer");
-const { model } = require("mongoose");
 const initializeServer = require("./server/index");
 const dataBase = require("./database/index");
 
